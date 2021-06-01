@@ -2,7 +2,6 @@ package main
 
 import (
 "fmt"
-"sort"
 )
 
 func main() {
@@ -62,14 +61,17 @@ func main() {
 	// s := make([]int, 5, 10)
 	// fmt.Println(len(s), cap(s)) //길이, 용량
 
-	s := []int{10, 11, 21, 31, 41, 51}
-	sort.Sort(sort.IntSlice(s)) //오름차순
-	fmt.Printf("%d\n", s)
+	// s := []int{10, 11, 21, 31, 41, 51}
+	// sort.Sort(sort.IntSlice(s)) //오름차순
+	// fmt.Printf("%d\n", s)
 
-	sort.Sort(sort.Reverse(sort.IntSlice(s))) //내림차순
+	// sort.Sort(sort.Reverse(sort.IntSlice(s))) //내림차순
 	
-	fmt.Printf("%d\n", s)
+	// fmt.Printf("%d\n", s)
 
-	//배열은 순회할 떄 완벽하게 같아야 하지만(원소의 타입과 어레이의 길이), 슬라이스는 그렇지 않아도 됨.
+	s := []int{10, 2, 21, 7, 41, 1}
+	t := make([]int, 4, 20)
+	copy(t, s)
+	fmt.Println(t)
 
 }
